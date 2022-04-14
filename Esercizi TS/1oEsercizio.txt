@@ -1,0 +1,6 @@
+let base : number = prompt("Inserisci un numero");
+
+let altezza : number = prompt("Inseriscine un altro");
+
+console.log("L'area e' "+ (base*altezza));
+console.log("Il perimetro e' "+((base*2)+(altezza*2)));
