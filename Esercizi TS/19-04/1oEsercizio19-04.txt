@@ -17,3 +17,14 @@ else{
 	console.log("Il numero è neutro");
 
 }
+
+/*switch ( true ) {
+   case nConvertito>0:
+       console.log("Il numero è positivo");
+       break;
+   case nConvertito<0:
+       console.log("Il numero è negativo");
+       break;
+    default:
+        console.log("Il numero e' 0, quindi neutro");
+}*/

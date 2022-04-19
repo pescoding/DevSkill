@@ -12,3 +12,18 @@ else{
 	console.log("L'anno non e' bisestile, mi dispiace");
 
 }
+
+/*switch(true){
+
+        case annoConvertito%400==0:
+	        console.log("L'anno e' bisestile");
+                break;
+        
+        case annoConvertito%100!=0 && annoConvertito%4==0:
+                console.log("L'anno e' bisestile");
+                break;
+
+        default:
+                console.log("L'anno non e' bisestile, mi dispiace");
+
+}*/

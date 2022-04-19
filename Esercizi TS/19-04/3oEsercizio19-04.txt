@@ -19,4 +19,20 @@ if(c<n3Convertito){
 
 }
 
-console.log("Il numero maggiore e'" + c);
+console.log("Il numero maggiore e' " + c);
+
+/*switch(c<n2Convertito){
+
+	case true:
+        c = n2Convertito;
+        break;
+
+}
+
+switch(c<n3Convertito){
+
+	case true:
+        c = n3Convertito;
+        break;
+
+}*/

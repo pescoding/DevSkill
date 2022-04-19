@@ -12,3 +12,12 @@ else{
 	console.log("Il numero è dispari");
 
 }
+
+/*switch ( nConvertito%2==0 ) {
+   case true:
+       console.log("Il numero è pari");
+       break;
+   case false:
+       console.log("Il numero è dispari");
+       break;
+}*/
