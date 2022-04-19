@@ -1,0 +1,19 @@
+let n : number = prompt("Inserisci un numero per le operazioni");
+
+const nConvertito : number = +n;
+
+if(nConvertito>0){
+
+	console.log("Il numero è positivo");
+
+}
+else if(nConvertito<0){
+	
+	console.log("Il numero è negativo");	
+
+}
+else{
+
+	console.log("Il numero è neutro");
+
+}

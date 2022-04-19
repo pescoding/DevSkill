@@ -1,0 +1,14 @@
+let anno : number = prompt("Inserisci un anno per sapere se è bisestile");
+
+const annoConvertito : number = +anno;
+
+if((annoConvertito%400==0)||((annoConvertito%100!=0)&&(annoConvertito%4==0))){
+
+	console.log("L'anno e' bisestile");
+
+}
+else{
+
+	console.log("L'anno non e' bisestile, mi dispiace");
+
+}

@@ -1,0 +1,22 @@
+let n1 : number = prompt("Inserisci il primo numero");
+let n2 : number = prompt("Inserisci il secondo numero");
+let n3 : number = prompt("Inserisci il terzo numero");
+
+const n1Convertito : number = +n1;
+const n2Convertito : number = +n2;
+const n3Convertito : number = +n3;
+
+let c : number = n1Convertito;
+
+if(c<n2Convertito){
+
+	c = n2Convertito;
+
+}
+if(c<n3Convertito){
+
+	c = n3Convertito;
+
+}
+
+console.log("Il numero maggiore e'" + c);
