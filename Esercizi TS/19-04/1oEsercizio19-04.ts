@@ -1,20 +1,32 @@
-let n : number = prompt("Inserisci un numero per le operazioni");
+let n : number = inputNumber("Inserisci un numero per le operazioni");
 
-const nConvertito : number = +n;
+controllo(n);
 
-if(nConvertito>0){
-
-	console.log("Il numero è positivo");
-
-}
-else if(nConvertito<0){
+function inputNumber (frase:string) : number{
 	
-	console.log("Il numero è negativo");	
+	let n : number = prompt(frase);
+	
+	return +n;
 
 }
-else{
 
-	console.log("Il numero è neutro");
+function controllo (n:number) : void{
+
+	if(n>0){
+
+		console.log("Il numero è positivo");
+
+	}
+	else if(n<0){
+		
+		console.log("Il numero è negativo");	
+
+	}
+	else{
+
+		console.log("Il numero è neutro");
+
+	}
 
 }
 

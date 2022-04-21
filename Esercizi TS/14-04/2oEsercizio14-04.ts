@@ -2,5 +2,11 @@ let a : string = prompt("Inserisci una parola");
 
 let b : string = prompt("Inseriscine un'altra");
 
-console.log(a+" "+b);
-console.log(b+" "+a);
+sommaStringhe(a,b);
+sommaStringhe(b,a);
+
+function sommaStringhe (a:string, b:string) : void{
+
+	console.log(a+" "+b);
+
+}

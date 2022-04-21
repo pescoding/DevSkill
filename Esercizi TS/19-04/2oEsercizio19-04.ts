@@ -1,15 +1,27 @@
-let n : number = prompt("Inserisci un numero per le operazioni");
+let n : number = inputNumber("Inserisci un numero per le operazioni");
 
-const nConvertito : number = +n;
+isPari(n);
 
-if(nConvertito%2==0){
+function isPari (n:number) : void{
+	
+	if(n%2==0){
 
-	console.log("Il numero è pari");
+		console.log("Il numero è pari");
+
+	}
+	else{
+
+		console.log("Il numero è dispari");
+
+	}
 
 }
-else{
 
-	console.log("Il numero è dispari");
+function inputNumber (frase:string) : number{
+	
+	let n : number = prompt(frase);
+	
+	return +n;
 
 }
 

@@ -1,25 +1,33 @@
-let n1 : number = prompt("Inserisci il primo numero");
-let n2 : number = prompt("Inserisci il secondo numero");
-let n3 : number = prompt("Inserisci il terzo numero");
+let n1 : number = inputNumber("Inserisci il primo numero");
+let n2 : number = inputNumber("Inserisci il secondo numero");
+let n3 : number = inputNumber("Inserisci il terzo numero");
 
-const n1Convertito : number = +n1;
-const n2Convertito : number = +n2;
-const n3Convertito : number = +n3;
+maggiore(n1,n2,n3);
 
-let c : number = n1Convertito;
+function maggiore(n1, n2, n3){
 
-if(c<n2Convertito){
+	if(n1<n2){
 
-	c = n2Convertito;
+		n1 = n2;
+
+	}
+	if(n1<n3){
+
+		n1 = n3;
+
+	}
+
+	console.log("Il numero maggiore e' " + n1);
 
 }
-if(c<n3Convertito){
 
-	c = n3Convertito;
+function inputNumber (frase:string) : number{
+	
+	let n : number = prompt(frase);
+	
+	return +n;
 
 }
-
-console.log("Il numero maggiore e' " + c);
 
 /*switch(c<n2Convertito){
 
