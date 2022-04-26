@@ -1,8 +1,10 @@
-let n1 : number = inputNumber("Inserisci il primo numero");
-let n2 : number = inputNumber("Inserisci il secondo numero");
-let n3 : number = inputNumber("Inserisci il terzo numero");
+let n : number[] = [];
 
-maggiore(n1,n2,n3);
+n[0] = inputNumber("Inserisci il primo numero");
+n[1] = inputNumber("Inserisci il secondo numero");
+n[2] = inputNumber("Inserisci il terzo numero");
+
+maggiore(n[0],n[1],n[2]);
 
 function maggiore(n1, n2, n3){
 
