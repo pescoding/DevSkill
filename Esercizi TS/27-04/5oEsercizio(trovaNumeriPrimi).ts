@@ -4,7 +4,6 @@ function trovaPrimi (quanti:number) : void{
 	
 	let c : number = 2;
 	let k : number = 0;
-	let primi : number[] = [];
 	let check : boolean;
 
 	while( k != quanti ){
@@ -20,8 +19,7 @@ function trovaPrimi (quanti:number) : void{
 
 		if(check){
 
-			primi[k] = c;
-			console.log(primi[k] + " è primo.");
+			console.log(c + " è primo.");
 			k++;
 			
 		}
