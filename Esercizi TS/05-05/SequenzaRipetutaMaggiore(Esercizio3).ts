@@ -40,7 +40,7 @@ function sequenzaRipetuta (A:number[]) : number[]{
 
 }
 
-function stampaLunghezza (max:number, numeroMassimo:number) : void{
+function stampaLunghezza (numeroMassimo:number, max:number) : void{
 
 	if(max >= 2)
 		console.log(numeroMassimo + " con lunghezza " + max);
