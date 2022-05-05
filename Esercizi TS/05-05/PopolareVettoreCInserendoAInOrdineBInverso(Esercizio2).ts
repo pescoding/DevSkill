@@ -8,10 +8,9 @@ let C : number[] = [];
 
 A = riempiArray(A, n);
 B = riempiArray(B, m);
+C = riempiSpecial(A, B);
 
-C = riempiSpecial(A, B, C, n, m );
-
-stampaArray(C, C.length);
+stampaArray(C);
 
 function inputNumber (frase:string) : number{
 	
@@ -34,9 +33,9 @@ function dimensioneArray (frase:string, n:number, m:number) : number{
 
 }
 
-function stampaArray (A:number[], n:number) : void{
+function stampaArray (A:number[]) : void{
 
-	for( let i = 0; i < n ; i++ ){
+	for( let i = 0; i < A.length ; i++ ){
 	
 		console.log("Il numero in posizione " + (i+1) + " è " + A[i]);
 
@@ -56,11 +55,13 @@ function riempiArray (A:number[], n:number) : number[]{
 
 }
 
-function riempiSpecial (A:number[], B:number[], C:number[], n:number, m:number) : number[]{
+function riempiSpecial (A:number[], B:number[]) : number[]{
+
+	let C : number[] = [];
 
 	let k : number;
 
-	for( let i = 0; i < n ; i++ ){
+	for( let i = 0; i < A.length ; i++ ){
 
 		C[i] = A[i];
 
@@ -68,7 +69,7 @@ function riempiSpecial (A:number[], B:number[], C:number[], n:number, m:number) 
 
 	}
 
-	for( let i = m-1; i >= 0 ; i-- ){
+	for( let i = (B.length-1); i >= 0 ; i-- ){
 
 		k++;
 		

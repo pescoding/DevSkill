@@ -1,15 +1,15 @@
-let A : number[] = riempiArrayCasuale();
+let A : number[] = riempiArray();
 
-sequenzaRipetuta(A);
+A = sequenzaRipetuta(A);
 
-function sequenzaRipetuta (A:number[]) : void{
+stampaLunghezza(A[0], A[1]);
 
-	let k: number = 0;
+function sequenzaRipetuta (A:number[]) : number[]{
+
+	let k: number = A[0];
 	let j: number = 1;
 	let max: number = 0;
-	let numeroMassimo : number;
-
-	k = A[0];
+	let numeroMassimo : number = k;
 
 	for(let i = 1; i < A.length ; i++){
 
@@ -31,6 +31,17 @@ function sequenzaRipetuta (A:number[]) : void{
 
 	}
 
+	let B : number[] = [];
+
+	B[0] = numeroMassimo;
+	B[1] = max;
+
+	return B;
+
+}
+
+function stampaLunghezza (max:number, numeroMassimo:number) : void{
+
 	if(max >= 2)
 		console.log(numeroMassimo + " con lunghezza " + max);
 	else
@@ -46,7 +57,7 @@ function inputNumber (frase:string) : number{
 
 }
 
-function riempiArrayCasuale () : number[]{
+function riempiArray () : number[]{
 
 	let A : number[] = []; 
 

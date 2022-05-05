@@ -2,13 +2,15 @@ let n : number = dimensioneArray("Di che dimensione vuoi gli array?", 5, 10);
 
 let A : number[] = [];
 let B : number[] = [];
+let C : number[] = [];
 
-A = riempiArray(A, n);
-B = riempiArray(B, n);
+A = riempiArray(n);
+B = riempiArray(n);
+C = riempiPariDispari(A, B);
 
-riempiPariDispari(A, B);
+stampaArray(C);
 
-function riempiPariDispari (A:number[], B:number[]) : void{
+function riempiPariDispari (A:number[], B:number[]) : number[]{
 
 	let C : number[] = [];
 
@@ -18,10 +20,10 @@ function riempiPariDispari (A:number[], B:number[]) : void{
 			C[i] = A[i];
 		else
 			C[i] = B[i];
-	
-		console.log("Il numero in posizione " + (i+1) + " del terzo array è " + C[i]);
 
 	}
+	
+	return C;
 
 }
 
@@ -46,7 +48,9 @@ function dimensioneArray (frase:string, n:number, m:number) : number{
 
 }
 
-function riempiArray (A:number[], n:number) : number[]{
+function riempiArray (n:number) : number[]{
+	
+	let A : number[] = [];
 
 	for( let i = 0; i < n ; i++ ){
 
@@ -55,5 +59,15 @@ function riempiArray (A:number[], n:number) : number[]{
 	}
 
 	return A;
+
+}
+
+function stampaArray (A:number[]) : void{
+
+	for( let i = 0; i < A.length ; i++ ){
+	
+		console.log("Il numero in posizione " + (i+1) + " è " + A[i]);
+
+	}
 
 }
