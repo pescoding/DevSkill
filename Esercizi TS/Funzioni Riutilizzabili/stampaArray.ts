@@ -17,3 +17,19 @@ function stampaArray (A:number[]) : void{
 	}
 
 }
+
+function stampaArray (A:string[]) : void{
+	
+	let stampa : string = "";
+
+	stampa+= A[0];
+	
+	for( let i = 1; i < A.length ; i++ ){
+	
+		stampa = stampa + A[i];
+
+	}
+
+	console.log(stampa);
+
+}
