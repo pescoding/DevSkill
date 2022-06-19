@@ -20,10 +20,10 @@ public class Calcolatrice {
 
         numeri.setNumeri(opt1, opt2);
 
-        System.out.println(opt1 + " + " + opt2 + " = " + numeri.addizione());
-        System.out.println(opt1 + " - " + opt2 + " = " + numeri.sottrazione());
-        System.out.println(opt1 + " * " + opt2 + " = " + numeri.moltiplicazione());
-        System.out.println(opt1 + " / " + opt2 + " = " + numeri.divisione());
+        System.out.println(numeri.numero1 + " + " + numeri.numero2 + " = " + numeri.addizione());
+        System.out.println(numeri.numero1 + " - " + numeri.numero2 + " = " + numeri.sottrazione());
+        System.out.println(numeri.numero1 + " * " + numeri.numero2 + " = " + numeri.moltiplicazione());
+        System.out.println(numeri.numero1 + " / " + numeri.numero2 + " = " + numeri.divisione());
 
     }
 
