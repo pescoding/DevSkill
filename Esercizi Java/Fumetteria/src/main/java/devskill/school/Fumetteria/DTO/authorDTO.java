@@ -1,2 +1,7 @@
-package devskill.school.Fumetteria.DTO;public class authorDTO {
+package devskill.school.Fumetteria.DTO;
+
+public class authorDTO {
+
+    protected String id;
+
 }
