@@ -25,4 +25,10 @@ public class Player {
 
     }
 
+    public void cambianLanci(){
+
+        this.nLanci ++;
+
+    }
+
 }

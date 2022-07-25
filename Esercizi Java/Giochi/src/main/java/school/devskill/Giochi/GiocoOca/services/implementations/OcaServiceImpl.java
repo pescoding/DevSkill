@@ -1,6 +1,9 @@
 package school.devskill.Giochi.GiocoOca.services.implementations;
 
 import org.springframework.stereotype.Service;
+import school.devskill.Giochi.GiocoOca.eccezioni.GiocatoreNotFoundException;
+import school.devskill.Giochi.GiocoOca.eccezioni.NoGiocatoreException;
+import school.devskill.Giochi.GiocoOca.eccezioni.VittoriaException;
 import school.devskill.Giochi.GiocoOca.models.Casella;
 import school.devskill.Giochi.GiocoOca.models.CasellaMovimento;
 import school.devskill.Giochi.GiocoOca.models.CasellaStop;
@@ -56,7 +59,15 @@ public class OcaServiceImpl implements IOcaService {
 
     }
 
-    public Player giocaTurno(Player player){
+    public Player giocaTurno (Player player) throws NoGiocatoreException, GiocatoreNotFoundException, VittoriaException {
+
+        player = trovaPlayer(player);
+
+        if(players.size()<2){
+
+            throw new NoGiocatoreException();
+
+        }
 
         if(player.isFreeze()){
 
@@ -68,8 +79,19 @@ public class OcaServiceImpl implements IOcaService {
             Random generator = new Random();
 
             Integer random = generator.nextInt(6) + 1;
+            System.out.println();
+            System.out.println(players.size());
+            System.out.println();
 
             player.cambiaPosizione(random);
+            player.cambianLanci();
+
+            if(player.getPosizione() >= 13)
+            {
+
+                throw new VittoriaException(player.getNome());
+
+            }
 
             if(board.get(player.getPosizione()).isMovimento()){
 
@@ -79,7 +101,7 @@ public class OcaServiceImpl implements IOcaService {
 
             }
 
-            if(board.get(player.getPosizione()).isMovimento()){
+            if(board.get(player.getPosizione()).isStop()){
 
                 player.setFreeze(true);
 
@@ -87,14 +109,32 @@ public class OcaServiceImpl implements IOcaService {
 
         }
 
+        System.out.println(player.isFreeze());
         return player;
+
+    }
+
+    public Player trovaPlayer(Player player) throws GiocatoreNotFoundException {
+
+        int k = -1;
+
+        for (int i = 0; i < players.size(); i++){
+
+            if(players.get(i).getNome().equalsIgnoreCase(player.getNome()))
+                k = i;
+
+        }
+
+        if(k == -1)
+            throw new GiocatoreNotFoundException();
+
+        return players.get(k);
 
     }
 
     public void reset(){
 
         players.clear();
-        board.clear();
 
     }
 
